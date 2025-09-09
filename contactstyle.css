@@ -1,0 +1,39 @@
+
+/* Example styling for your form */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      gap: 1rem; /* space between fields */
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    textarea {
+      min-height: 120px; /* makes it bigger */
+      resize: vertical;  /* lets user adjust height */
+    }
+
+    button {
+      padding: 0.7rem;
+      background: #0055ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
