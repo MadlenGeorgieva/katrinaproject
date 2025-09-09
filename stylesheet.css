@@ -1,0 +1,79 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;  /* takes up all space screen width */
+  grid-template-rows: 80px 280px 1fr 40px;
+  grid-template-areas: 
+  "header"
+  "sidebar"
+  "main"
+  "footer"
+  ;
+}
+
+/* --- The header section --- */
+.myheader {
+  grid-area: header;
+  text-align: center;
+}
+
+/* --- The sidebar section --- */
+.mysidebar {
+  grid-area: sidebar;
+  text-align: center;
+}
+
+.circular-image {
+  width: 150px;
+  height: 150px;
+  clip-path: circle(50% at 50% 50%);
+  object-fit: cover;
+  transform: rotate(-10deg);
+}
+
+.linkpara {
+  text-align: center;
+}
+.link {
+  color: black;
+  text-decoration: none;
+  padding: 5px 20px;
+  }
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.currentlink {
+  background-color: black;
+  color: white;
+}
+
+/* --- The main section --- */
+.mymain {
+  grid-area: main;
+  background-image: radial-gradient(circle, #ff7e5f, #feb47b);
+  padding: 20px;
+}
+
+/* --- The footer section --- */
+.myfooter {
+  grid-area: footer;
+  text-align: center;
+}
+
+@media (min-width:768px){
+  body{
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 40px;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  }
+}
